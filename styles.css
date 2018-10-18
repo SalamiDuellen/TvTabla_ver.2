@@ -1,7 +1,11 @@
-  /* Remove the navbar's default margin-bottom and rounded borders */ 
+@media (min-width: 768px){}
+/* Remove the navbar's default margin-bottom and rounded borders */ 
   .navbar {
     margin-bottom: 0;
     border-radius: 0;
+  }
+  .navbar-inverse {
+    background-color: #FCF4EC;
   }
   /*nav-barens bakgrund ändrad från default*/
   .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
