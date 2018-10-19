@@ -1,8 +1,14 @@
 /* Hide the carousel text when the screen is less than 600 pixels wide */
 @media (max-width: 600px) {
-  .carousel-caption {
-    display: none; 
+  #myCarousel {
+    display: none;
   }
+ ul.active {
+background: #BDD4DE;
+  }
+  /* .carousel-caption {
+    display: none; 
+  } */
   
    /* .navbar-inverse .navbar-nav .active {
     color: #000;
@@ -24,30 +30,19 @@
 
 }
 
+.container-fluid .row .navbar {
+  background: #BDD4DE;
+  color: #000;
+}
 /* Remove the navbar's default margin-bottom and rounded borders */ 
   .navbar { 
     margin-bottom: 0;
     border-radius: 0;
-    background-color: #BDD4DE;
   }
-<<<<<<< HEAD
-  .navbar-inverse {
-    background-color: #FCF4EC;
-  }
-=======
-
->>>>>>> a44e7b9f31565534fea78f38956cb24296e4bb23
   /*texten på listitem ändrats till svart*/
   .navbar-inverse .navbar-nav>li>a{
     color: #000;
-<<<<<<< HEAD
-}
-/* Ändrar förgen på texten när man hovrar över den. Den aktiva sidan visas med röd bakgrund */
-.navbar-inverse .navbar-nav>.active>a {
-  /* color: #000; */
-  background-color: #c03c3c;
-}
-=======
+    background: #BDD4DE;
     }
 
   .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus{
@@ -55,7 +50,10 @@
      background-color: #3F5765;
      }
   
-
+.navbar-collapse .navbar-nav .active a {
+  background: #BDD4DE;
+  color: #000;
+}
   .navbar-inverse .navbar-nav>li:hover{
     color: #000;
     background-color: #3F5765;  
@@ -69,14 +67,9 @@
   color:#000;
   background-color: #3F5765(101, 63, 63);
 } */
->>>>>>> a44e7b9f31565534fea78f38956cb24296e4bb23
 li form {
   padding-top: 15px;
   padding-bottom: 15px;
-}
-/*Sätter samma färg på bodyn bakom elementet som elementet har. Var svart innan*/
-body .container-fluid {
-  background-color: #BDD4DE;
 }
   /* Add a gray background color and some padding to the footer */
   footer {
