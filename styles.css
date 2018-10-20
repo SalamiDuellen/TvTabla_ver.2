@@ -3,8 +3,8 @@
   #myCarousel {
     display: none;
   }
- ul.active {
-background: #BDD4DE;
+  ul.active {
+    background: #BDD4DE;
   }
   /* .carousel-caption {
     display: none; 
@@ -29,58 +29,50 @@ background: #BDD4DE;
 
 
 }
-
-.container-fluid .row .navbar {
+ul.active {
+  background: #BDD4DE;
+}
+.navbar {
   background: #BDD4DE;
   color: #000;
+  margin-bottom: 0;
+  border-radius: 0;
 }
-/* Remove the navbar's default margin-bottom and rounded borders */ 
-  .navbar { 
-    margin-bottom: 0;
-    border-radius: 0;
-  }
   /*texten på listitem ändrats till svart*/
-  .navbar-inverse .navbar-nav>li>a{
-    color: #000;
-    background: #BDD4DE;
-    }
-
-  .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus{
-     color: white;
-     background-color: #3F5765;
-     }
-  
-.navbar-collapse .navbar-nav .active a {
-  background: #BDD4DE;
+.navbar-inverse .navbar-nav>li>a{
   color: #000;
+  background: #BDD4DE;
 }
-  .navbar-inverse .navbar-nav>li:hover{
-    color: #000;
-    background-color: #3F5765;  
-    }
-
-    .navbar-inverse .navbar-nav>.active>a:hover{
-      background-color: #3F5765;  
-      }
-/* Ändrar färgen på texten när man hovrar över den. Den aktiva sidan visas med röd bakgrund */
-/* .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
-  color:#000;
-  background-color: #3F5765(101, 63, 63);
-} */
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active,
+.navbar-inverse .navbar-nav>.active>a:hover {
+  background-color: #BDD4DE;
+  color: #fff;
+}
+.navbar-inverse .navbar-nav>li:hover {
+  color: #000;
+  background-color: #3F5765;  
+}
 li form {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-  /* Add a gray background color and some padding to the footer */
-  footer {
-    background-color: #f2f2f2;
-    padding: 25px;
-  }
-  
+/*Gör så att sökformuläret inte markeras när man hovrar över*/
+#topnavsearch:hover {
+  background-color: #BDD4DE;
+  float: right;
+}
+#headerprogrampage {
+  text-align: center;
+}
+/* Add a gray background color and some padding to the footer */
+footer {
+  background-color: #f2f2f2;
+  padding: 25px;
+}
 .carousel-inner img {
-    width: 100%; /* Set width to 100% */
-    margin: auto;
-    min-height:200px;
+  width: 100%; /* Set width to 100% */
+  margin: auto;
+  min-height:200px;
 }
 /* En rubrik för att fylla ut lite på sidan*/
 #headaboutus {
