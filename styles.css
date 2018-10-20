@@ -6,28 +6,7 @@
   ul.active {
     background: #BDD4DE;
   }
-  /* .carousel-caption {
-    display: none; 
-  } */
   
-   /* .navbar-inverse .navbar-nav .active {
-    color: #000;
-  }
-
-  .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus {
-    color: #000;
-    background-color: #BDD4DE;
-  }
-
-  .navbar-inverse .navbar-nav>.active>a:hover {
-    background-color: #3F5765;
-  }
-
-  .navbar-inverse .navbar-nav>a:hover {
-    background-color: #3F5765;
-  } */
-
-
 }
 ul.active {
   background: #BDD4DE;
