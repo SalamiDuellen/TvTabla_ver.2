@@ -7,6 +7,13 @@
     background: #BDD4DE;
   }
 }
+#myCarousel {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
 .navbar {
   background: #BDD4DE;
   color: #000;
