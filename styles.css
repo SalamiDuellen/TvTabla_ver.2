@@ -43,6 +43,11 @@ li form {
 #headerprogrampage {
   text-align: center;
 }
+
+#tvchannellogo{
+  width: 100%;
+}
+
 /* Add a gray background color and some padding to the footer */
 footer {
   background-color: #f2f2f2;
