@@ -43,8 +43,12 @@ li form {
 #headerprogramlogo img {
   width: 15%;
 }
-.coworkerinfo {
-  text-align: left;
+.list-group-item {
+  border: none;
+}
+.coworkerinfo img {
+  width: 25%;
+  margin: auto;
 }
 
 .tvchannellogo img{
