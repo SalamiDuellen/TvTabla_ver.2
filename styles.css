@@ -44,9 +44,11 @@ li form {
   text-align: center;
 }
 
-#tvchannellogo{
-  width: 100%;
-}
+.tvchannellogo img{
+  width: 20%;
+  margin: auto;
+  }
+
 
 /* Add a gray background color and some padding to the footer */
 footer {
