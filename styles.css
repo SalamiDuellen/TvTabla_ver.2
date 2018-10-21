@@ -6,10 +6,6 @@
   ul.active {
     background: #BDD4DE;
   }
-  
-}
-ul.active {
-  background: #BDD4DE;
 }
 .navbar {
   background: #BDD4DE;
@@ -40,8 +36,17 @@ li form {
   background-color: #BDD4DE;
   float: right;
 }
-#headerprogrampage {
+#headerprogramlogo {
   text-align: center;
+}
+#headerprogramlogo img {
+  width: 15%;
+}
+.mychannel img {
+  width: 15%;
+}
+.coworkerinfo {
+  text-align: left;
 }
 /* Add a gray background color and some padding to the footer */
 footer {
