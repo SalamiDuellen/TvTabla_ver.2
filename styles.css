@@ -39,12 +39,22 @@ li form {
 #headerprogramlogo {
   text-align: center;
 }
+<<<<<<< HEAD
+
+.tvchannellogo img{
+  width: 20%;
+  margin: auto;
+  }
+
+
+=======
 #headerprogramlogo img {
   width: 15%;
 }
 .coworkerinfo {
   text-align: left;
 }
+>>>>>>> 31482f500dfb88429afe2d41e0100d12eecb1f13
 /* Add a gray background color and some padding to the footer */
 footer {
   background-color: #f2f2f2;
