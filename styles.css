@@ -31,6 +31,7 @@ li form {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+
 /*Gör så att sökformuläret inte markeras när man hovrar över*/
 #topnavsearch:hover {
   background-color: #BDD4DE;
@@ -45,6 +46,8 @@ li form {
 }
 .list-group-item {
   border: none;
+  padding: 2%;
+  text-align: left;
 }
 .coworkerinfo img {
   width: 25%;
