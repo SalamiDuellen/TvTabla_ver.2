@@ -32,7 +32,7 @@
 }
 .navbar-inverse .navbar-nav>li:hover {
   color: #000;
-  background-color: #3F5765;  
+  background-color: #3F5765;
 }
 li form {
   padding-top: 15px;
@@ -84,7 +84,17 @@ footer {
 p {
   text-align: center;
 }
-/*Satte bara ett värde för att få formuläret ut från kanten*/
-.form-group {
-  margin: 10%;
+#contactusform {
+  margin: auto;
+  max-width: 600px;
+  max-height: 1000px;
+}
+.error {
+  color: red;
+  margin-left: auto;
+  text-align: end;
+}
+label.error {
+  display: inline;
+
 }
