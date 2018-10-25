@@ -51,6 +51,9 @@ li form {
 #headerprogramlogo img {
   width: 15%;
 }
+ul {
+  list-style: none;
+}
 .list-group-item {
   border: none;
   padding: 2%;
