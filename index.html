@@ -257,20 +257,25 @@
         function myFunction() {
             var search = document.getElementsByName("search");
             var list = document.getElementById("programlist");
+            var nodelist =list.getElementsByTagName("li")
+
+            
             var item = list.getElementsByTagName("li");
+            for (var j = 0; j < item.length; j++) {
+                // if (search == item[i].innerText) {
 
-            for (var i = 0; i < list.length; index++) {
-
-                for (var i = 0; i < item.length; i++) {
-                    if (search == item[i].innerText) {
-                    
-                    document.write(item[i].innerHTML);
+                document.write(item[j].innerHTML);
+            }
+        };
 
 
-                }
-            };
-        }
+        var div = document.getElementById("myDIV");
+var nodelist = div.getElementsByTagName("P");
 
+var i;
+for (i = 0; i < nodelist.length; i++) {
+    nodelist[i].style.backgroundColor = "red";
+}
 
     </script>
 
