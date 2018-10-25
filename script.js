@@ -25,3 +25,28 @@ $(function () {
         }
     });
 });
+
+function myFunction() {
+
+    var test = document.forms["topnavsearch"]["search"].value;
+    var testLowCase = test.toLowerCase();
+
+    var list = document.getElementById("tvchannel");
+
+    var items = list.getElementsByTagName("li");
+
+    //Printar alla li i en ul.
+    for (var i = 0; i < items.length; i++) {
+
+        var x = items[i].innerText;
+        var xLowCAse = x.toLowerCase();
+
+        if (xLowCAse.includes(testLowCase)) {
+
+            document.write(x);
+            // document.getElementById("programinfo").innerHTML = x;
+
+        }
+
+    };
+}
