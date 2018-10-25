@@ -200,26 +200,28 @@
                 <div class="col-xs-12 col-sm-6 col-md-3">
                     <img src="Images/kanal4.png" class="img-responsive" alt="kanal4">
                     <div class="list-group">
-                        <li> <a href="#" class="list-group-item"> 06.00 Hela England bakar</a></li>
-                        <li> <a href="#" class="list-group-item"> 07.00 Bygglov</a></li>
-                        <li> <a href="#" class="list-group-item"> 07.55 Nyhetsmorgon</a></li>
-                        <li> <a href="#" class="list-group-item">11.30 Så mycket bättre</a></li>
-                        <li> <a href="#" class="list-group-item"> 13.20 Bonde söker fru</a></li>
-                        <li> <a href="#" class="list-group-item"> 14.20 Bytt är bytt</a></li>
-                        <li> <a href="#" class="list-group-item"> 15.20 Kockarnas kamp</a></li>
-                        <li> <a href="#" class="list-group-item"> 16.20 Hela Sverige bakar</a></li>
-                        <li> <a href="#" class="list-group-item"> 17.25 Mumbo jumbo</a></li>
-                        <li> <a href="#" class="list-group-item"> 17.55 Keno</a></li>
-                        <li> <a href="#" class="list-group-item"> 18.00 Bingolotto</a></li>
-                        <li> <a href="#" class="list-group-item"> 19.00 Nyheterna</a></li>
-                        <li> <a href="#" class="list-group-item"> 19.10 Sporten</a></li>
-                        <li> <a href="#" class="list-group-item"> 19.25 Väder</a></li>
-                        <li> <a href="#" class="list-group-item"> 19.30 Bingolotto, forts</a></li>
-                        <li> <a href="#" class="list-group-item"> 20.00 Kockarnas kamp</a></li>
-                        <li> <a href="#" class="list-group-item"> 21.00 Hellenius hörna</a></li>
-                        <li> <a href="#" class="list-group-item"> 22.00 Nyheterna</a></li>
-                        <li> <a href="#" class="list-group-item"> 22.05 Väder</a></li>
-                        <li> <a href="#" class="list-group-item"> 22.10 Wallander: Prästen</a></li>
+                        <ul id="programlist">
+                            <li> <a href="#" class="list-group-item"> 06.00 Hela England bakar</a></li>
+                            <li> <a href="#" class="list-group-item"> 07.00 Bygglov</a></li>
+                            <li> <a href="#" class="list-group-item"> 07.55 Nyhetsmorgon</a></li>
+                            <li> <a href="#" class="list-group-item">11.30 Så mycket bättre</a></li>
+                            <li> <a href="#" class="list-group-item"> 13.20 Bonde söker fru</a></li>
+                            <li> <a href="#" class="list-group-item"> 14.20 Bytt är bytt</a></li>
+                            <li> <a href="#" class="list-group-item"> 15.20 Kockarnas kamp</a></li>
+                            <li> <a href="#" class="list-group-item"> 16.20 Hela Sverige bakar</a></li>
+                            <li> <a href="#" class="list-group-item"> 17.25 Mumbo jumbo</a></li>
+                            <li> <a href="#" class="list-group-item"> 17.55 Keno</a></li>
+                            <li> <a href="#" class="list-group-item"> 18.00 Bingolotto</a></li>
+                            <li> <a href="#" class="list-group-item"> 19.00 Nyheterna</a></li>
+                            <li> <a href="#" class="list-group-item"> 19.10 Sporten</a></li>
+                            <li> <a href="#" class="list-group-item"> 19.25 Väder</a></li>
+                            <li> <a href="#" class="list-group-item"> 19.30 Bingolotto, forts</a></li>
+                            <li> <a href="#" class="list-group-item"> 20.00 Kockarnas kamp</a></li>
+                            <li> <a href="#" class="list-group-item"> 21.00 Hellenius hörna</a></li>
+                            <li> <a href="#" class="list-group-item"> 22.00 Nyheterna</a></li>
+                            <li> <a href="#" class="list-group-item"> 22.05 Väder</a></li>
+                            <li> <a href="#" class="list-group-item"> 22.10 Wallander: Prästen</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -256,16 +258,22 @@
             var list = document.getElementById("programlist");
             var item = list.getElementsByTagName("li");
 
-            for (var i = 0; i < item.length; i++) {
-                x = item[i].innerText;
+            for (var i = 0; i < list.length; index++) {
 
-                if (1 == 1) {
-                    // var x = item[i].innerText;
+                for (var i = 0; i < item.length; i++) {
 
-                    document.write(x);
+                    document.write(item[i].innerHTML);
                 }
-            }
+            };
         }
+
+
+            // if (search == "bajs") {
+            //     // var x = item[i].innerText;
+            //     document.write(search);
+            //     break;
+            // }
+
     </script>
 
 </body>
