@@ -253,16 +253,33 @@
 
 
     <script>
+        debugger;
         function myFunction() {
             var search = document.getElementsByName("search");
             var list = document.getElementById("programlist");
             var item = list.getElementsByTagName("li");
+<<<<<<< HEAD
 
             for (var i = 0; i < list.length; index++) {
 
                 for (var i = 0; i < item.length; i++) {
 
                     document.write(item[i].innerHTML);
+=======
+            for (var i = 0; i < item.length; i++) {
+                x = item[i].innerText;
+
+<<<<<<< HEAD
+                if (search == item[i].innerText) {
+
+                    document.write(item[i]);
+=======
+                if (1 == 1) {
+                    // var x = item[i].innerText;
+
+                    document.write(x);
+>>>>>>> 75d9e055961d9dde94d14ef1d71e3173c50feb03
+>>>>>>> 372966307ca451ae5711f3315c4d85b94733a683
                 }
             };
         }
