@@ -201,30 +201,26 @@
                     <img src="Images/kanal4.png" class="img-responsive" alt="kanal4">
                     <div class="list-group">
                         <ul id="programlist">
-<<<<<<< HEAD
-
-=======
->>>>>>> e22611d6a2a087e88cc35cd4e9ac4f0f242296ed
-                            <li> <a href="#" class="list-group-item"> 06.00 Hela England bakar</a></li>
-                            <li> <a href="#" class="list-group-item"> 07.00 Bygglov</a></li>
-                            <li> <a href="#" class="list-group-item"> 07.55 Nyhetsmorgon</a></li>
-                            <li> <a href="#" class="list-group-item">11.30 Så mycket bättre</a></li>
-                            <li> <a href="#" class="list-group-item"> 13.20 Bonde söker fru</a></li>
-                            <li> <a href="#" class="list-group-item"> 14.20 Bytt är bytt</a></li>
-                            <li> <a href="#" class="list-group-item"> 15.20 Kockarnas kamp</a></li>
-                            <li> <a href="#" class="list-group-item"> 16.20 Hela Sverige bakar</a></li>
-                            <li> <a href="#" class="list-group-item"> 17.25 Mumbo jumbo</a></li>
-                            <li> <a href="#" class="list-group-item"> 17.55 Keno</a></li>
-                            <li> <a href="#" class="list-group-item"> 18.00 Bingolotto</a></li>
-                            <li> <a href="#" class="list-group-item"> 19.00 Nyheterna</a></li>
-                            <li> <a href="#" class="list-group-item"> 19.10 Sporten</a></li>
-                            <li> <a href="#" class="list-group-item"> 19.25 Väder</a></li>
-                            <li> <a href="#" class="list-group-item"> 19.30 Bingolotto, forts</a></li>
-                            <li> <a href="#" class="list-group-item"> 20.00 Kockarnas kamp</a></li>
-                            <li> <a href="#" class="list-group-item"> 21.00 Hellenius hörna</a></li>
-                            <li> <a href="#" class="list-group-item"> 22.00 Nyheterna</a></li>
-                            <li> <a href="#" class="list-group-item"> 22.05 Väder</a></li>
-                            <li> <a href="#" class="list-group-item"> 22.10 Wallander: Prästen</a></li>
+                                <li> <a href="#" class="list-group-item"> 06.00 Hela England bakar</a></li>
+                                <li> <a href="#" class="list-group-item"> 07.00 Bygglov</a></li>
+                                <li> <a href="#" class="list-group-item"> 07.55 Nyhetsmorgon</a></li>
+                                <li> <a href="#" class="list-group-item">11.30 Så mycket bättre</a></li>
+                                <li> <a href="#" class="list-group-item"> 13.20 Bonde söker fru</a></li>
+                                <li> <a href="#" class="list-group-item"> 14.20 Bytt är bytt</a></li>
+                                <li> <a href="#" class="list-group-item"> 15.20 Kockarnas kamp</a></li>
+                                <li> <a href="#" class="list-group-item"> 16.20 Hela Sverige bakar</a></li>
+                                <li> <a href="#" class="list-group-item"> 17.25 Mumbo jumbo</a></li>
+                                <li> <a href="#" class="list-group-item"> 17.55 Keno</a></li>
+                                <li> <a href="#" class="list-group-item"> 18.00 Bingolotto</a></li>
+                                <li> <a href="#" class="list-group-item"> 19.00 Nyheterna</a></li>
+                                <li> <a href="#" class="list-group-item"> 19.10 Sporten</a></li>
+                                <li> <a href="#" class="list-group-item"> 19.25 Väder</a></li>
+                                <li> <a href="#" class="list-group-item"> 19.30 Bingolotto, forts</a></li>
+                                <li> <a href="#" class="list-group-item"> 20.00 Kockarnas kamp</a></li>
+                                <li> <a href="#" class="list-group-item"> 21.00 Hellenius hörna</a></li>
+                                <li> <a href="#" class="list-group-item"> 22.00 Nyheterna</a></li>
+                                <li> <a href="#" class="list-group-item"> 22.05 Väder</a></li>
+                                <li> <a href="#" class="list-group-item"> 22.10 Wallander: Prästen</a></li>
                         </ul>
                     </div>
                 </div>
@@ -259,46 +255,28 @@
     <script>
         debugger;
         function myFunction() {
-<<<<<<< HEAD
 
-            var search = document.forms["search"].value;
-            var list = document.getElementById("programlist");
-            var items = list.getElementsByTagName("li");
+            var test = document.forms["topnavsearch"]["search"].value;
+            var testLowCase = test.toLowerCase();
+            // document.write(test);// printar det man skriver i sökrutan
+            var ul = document.getElementById("programlist");
+            var items = ul.getElementsByTagName("li");
 
-                if (search !== "") {
-                    // var x = items[i].innerText;
-                    alert("Du måste");
-                    // document.write(x);
-                }
+            //Printar alla li i en ul.
             for (var i = 0; i < items.length; i++) {
+
                 var x = items[i].innerText;
+                var xLowCAse = x.toLowerCase();
 
-            }
+                if (xLowCAse.includes(testLowCase)) {
+
+                    document.write(x);
+
+                }
+
+            };
         }
-=======
-            var search = document.getElementsByName("search");
-            var list = document.getElementById("programlist");
-            var nodelist =list.getElementsByTagName("li")
 
-            
-            var item = list.getElementsByTagName("li");
-            for (var j = 0; j < item.length; j++) {
-                // if (search == item[i].innerText) {
-
-                document.write(item[j].innerHTML);
-            }
-        };
-
-
-        var div = document.getElementById("myDIV");
-var nodelist = div.getElementsByTagName("P");
-
-var i;
-for (i = 0; i < nodelist.length; i++) {
-    nodelist[i].style.backgroundColor = "red";
-}
-
->>>>>>> e22611d6a2a087e88cc35cd4e9ac4f0f242296ed
     </script>
 
 </body>
