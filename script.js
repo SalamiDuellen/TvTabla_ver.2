@@ -32,8 +32,10 @@ function myFunction() {
     var testLowCase = test.toLowerCase();
 
     var list = document.getElementById("tvchannel");
-
     var items = list.getElementsByTagName("li");
+
+    var ulListTest = document.getElementById("prog-info-ul");
+
 
     //Printar alla li i en ul.
     for (var i = 0; i < items.length; i++) {
@@ -43,9 +45,11 @@ function myFunction() {
 
         if (xLowCAse.includes(testLowCase)) {
 
-            document.write(x);
+            // document.write(x);
+            var li = document.createElement('li');
+            ulListTest.appendChild(li);
+            li.innerHTML = li.innerHTML + x;
             // document.getElementById("programinfo").innerHTML = x;
-
         }
 
     };
