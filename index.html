@@ -201,7 +201,10 @@
                     <img src="Images/kanal4.png" class="img-responsive" alt="kanal4">
                     <div class="list-group">
                         <ul id="programlist">
+<<<<<<< HEAD
 
+=======
+>>>>>>> e22611d6a2a087e88cc35cd4e9ac4f0f242296ed
                             <li> <a href="#" class="list-group-item"> 06.00 Hela England bakar</a></li>
                             <li> <a href="#" class="list-group-item"> 07.00 Bygglov</a></li>
                             <li> <a href="#" class="list-group-item"> 07.55 Nyhetsmorgon</a></li>
@@ -256,6 +259,7 @@
     <script>
         debugger;
         function myFunction() {
+<<<<<<< HEAD
 
             var search = document.forms["search"].value;
             var list = document.getElementById("programlist");
@@ -271,6 +275,30 @@
 
             }
         }
+=======
+            var search = document.getElementsByName("search");
+            var list = document.getElementById("programlist");
+            var nodelist =list.getElementsByTagName("li")
+
+            
+            var item = list.getElementsByTagName("li");
+            for (var j = 0; j < item.length; j++) {
+                // if (search == item[i].innerText) {
+
+                document.write(item[j].innerHTML);
+            }
+        };
+
+
+        var div = document.getElementById("myDIV");
+var nodelist = div.getElementsByTagName("P");
+
+var i;
+for (i = 0; i < nodelist.length; i++) {
+    nodelist[i].style.backgroundColor = "red";
+}
+
+>>>>>>> e22611d6a2a087e88cc35cd4e9ac4f0f242296ed
     </script>
 
 </body>
