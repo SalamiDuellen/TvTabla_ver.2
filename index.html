@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
         crossorigin="anonymous">
 
+    <!--For use of autocomplete-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+
     <!-- för autocompletefunktionen -->
     <script src="//code.jquery.com/jquery-1.12.4.js"></script>
     <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -22,9 +26,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
 
-
-
-
+    
     <script>
             var test = document.forms["topnavsearch"]["search"].value;
             var testLowCase = test.toLowerCase();
@@ -32,7 +34,7 @@
             var items = list.getElementsByTagName("li");
 
             $(function () {
-                $("#inputautocomplete").autocomplete({ source: items });
+                $("#tags").autocomplete({ source: items });
             });
     </script>
 </head>
@@ -57,8 +59,8 @@
                         <li><a href="aboutus.html">Om oss</a></li>
                         <li><a href="contact.html">Kontakta oss</a></li>
                         <li>
-                            <form autocomplete="off" id="topnavsearch"><input id="inputautocomplete" type="text" name="search"
-                                    placeholder="Sök...">
+                            <form autocomplete="off" id="topnavsearch"><input id="tags" type="text" name="search"
+                                placeholder="Sök...">
                                 <button onclick="myFunction();" type="button">Sök</button>
                             </form>
                         </li>
@@ -69,13 +71,15 @@
                 </div>
             </nav>
         </div>
+
+        
         <div class="col-xs-12">
             <p id="programinfo">
                 <ul id="prog-info-ul"></ul>
             </p>
         </div>
     </div>
-
+    
     <div class="container">
         <div class="row">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -84,20 +88,20 @@
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                     <li data-target="#myCarousel" data-slide-to="1"></li>
                 </ol>
-
+                
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
                         <img src="Images/samycketbattre.jpg" alt="Så mycket bättre">
                     </div>
-
+                    
                     <div class="item">
                         <img src="Images/aktuellt.jpg" alt="Aktuellt">
                         <div class="carousel-caption">
                         </div>
                     </div>
                 </div>
-
+                
                 <!-- Left and right controls -->
                 <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -110,7 +114,7 @@
             </div>
         </div>
     </div>
-
+    
     <div class="container text-center">
         <div id="tvchannel">
             <div class="row">
