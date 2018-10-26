@@ -32,24 +32,23 @@ function myFunction() {
     var testLowCase = test.toLowerCase();
 
     var list = document.getElementById("tvchannel");
-    var items = list.getElementsByTagName("li").value;
+    var items = list.getElementsByTagName("li");
 
     var ulListAdd = document.getElementById("prog-info-ul");
 
-    
     // //Printar alla li i en ul.
     for (var i = 0; i < items.length; i++) {
-        
-            var xLowCAse = x.toLowerCase();
+        var x = items[i].innerText;
+        var xLowCAse = x.toLowerCase();
+        if (xLowCAse.includes(testLowCase)) {
 
-            if (xLowCAse.includes(testLowCase)) {
-
-                // document.write(x);
-                var li = document.createElement('li');
-                ulListAdd.appendChild(li);
-                li.innerHTML = li.innerHTML + x;
-            }
+            // document.write(x);
+            var li = document.createElement('li');
+            ulListAdd.appendChild(li);
+            li.innerHTML = li.innerHTML + x;
+        }
 
     };
+    return arr;
 }
 

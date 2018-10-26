@@ -308,16 +308,19 @@
         var testLowCase = test.toLowerCase();
 
         var list = document.getElementById("tvchannel");
-        // var items = list.getElementsByTagName("li"); 
+        var items = list.getElementsByTagName("li"); 
         // var availableTags = ["06.15 Under klubban",
         //     "06.45 Sverige!",
         //     "07.15 Timjan, tupp & tårta ",
         //     " 08.15 Docstop: Saara Aalto"
         // ];
         // var availableTags = myFunction();
-   
+
+        var arr = new Array;
+        arr.push(x);
+
         $(function () {
-            $("#inputautocomplete").autocomplete({ source: items });
+            $("#inputautocomplete").autocomplete({ source: arr });
         });
 
     </script>
