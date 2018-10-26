@@ -12,11 +12,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
         crossorigin="anonymous">
 
-    <!--For use of autocomplete-->
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-
     <!-- för autocompletefunktionen -->
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
     <script src="//code.jquery.com/jquery-1.12.4.js"></script>
     <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- jQuery library -->
@@ -26,17 +23,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
 
-    
-    <script>
-            var test = document.forms["topnavsearch"]["search"].value;
-            var testLowCase = test.toLowerCase();
-            var list = document.getElementById("tvchannel");
-            var items = list.getElementsByTagName("li");
 
-            $(function () {
-                $("#tags").autocomplete({ source: items });
-            });
-    </script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+
 </head>
 
 <body>
@@ -59,10 +53,14 @@
                         <li><a href="aboutus.html">Om oss</a></li>
                         <li><a href="contact.html">Kontakta oss</a></li>
                         <li>
-                            <form autocomplete="off" id="topnavsearch"><input id="tags" type="text" name="search"
-                                placeholder="Sök...">
-                                <button onclick="myFunction();" type="button">Sök</button>
-                            </form>
+                            <div class="ui-widget">
+                                <!-- <label for="tags">Tags: </label>
+                                         <input id="tags"> -->
+                                <form autocomplete="off" id="topnavsearch"><input id="inputautocomplete" type="text"
+                                        name="search" placeholder="Sök...">
+                                    <button onclick="myFunction();" type="button">Sök</button>
+                                </form>
+                            </div>
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
@@ -71,15 +69,13 @@
                 </div>
             </nav>
         </div>
-
-        
         <div class="col-xs-12">
             <p id="programinfo">
                 <ul id="prog-info-ul"></ul>
             </p>
         </div>
     </div>
-    
+
     <div class="container">
         <div class="row">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -88,20 +84,20 @@
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                     <li data-target="#myCarousel" data-slide-to="1"></li>
                 </ol>
-                
+
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
                         <img src="Images/samycketbattre.jpg" alt="Så mycket bättre">
                     </div>
-                    
+
                     <div class="item">
                         <img src="Images/aktuellt.jpg" alt="Aktuellt">
                         <div class="carousel-caption">
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Left and right controls -->
                 <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -114,7 +110,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="container text-center">
         <div id="tvchannel">
             <div class="row">
@@ -125,34 +121,34 @@
                     <div class="list-group">
                         <ul id="programlist">
                             <li> <a href="#" class="list-group-item">06.15 Under klubban</a></li>
-                            <li> <a href="#" class="list-group-item">06.45 Sverige!</a></li>
-                            <li> <a href="#" class="list-group-item">07.15 Timjan, tupp & tårta </a></li>
-                            <li> <a href="#" class="list-group-item">08.15 Docstop: Saara Aalto</a></li>
-                            <li> <a href="#" class="list-group-item">08.45 Idas skilda världar</a></li>
-                            <li> <a href="#" class="list-group-item">09.15 Landet runt</a></li>
-                            <li> <a href="#" class="list-group-item">10.00 Fråga Lund</a></li>
-                            <li> <a href="#" class="list-group-item">11.00 Vem vet mest?</a></li>
-                            <li> <a href="#" class="list-group-item">11.45 Duellen</a></li>
-                            <li> <a href="#" class="list-group-item">12.45 Sportstudion</a></li>
-                            <li> <a href="#" class="list-group-item">13.00 Ishockey: SDHL</a></li>
-                            <li> <a href="#" class="list-group-item">15.00 Sportstudion</a></li>
-                            <li> <a href="#" class="list-group-item">15.10 Ridsport: Världscupen hoppning</a></li>
-                            <li> <a href="#" class="list-group-item">17.00 Salongen - tävlingsprogrammet</a></li>
-                            <li> <a href="#" class="list-group-item">17.45 Svart kärlek HD Norskt program</a></li>
-                            <li> <a href="#" class="list-group-item">17.55 Sportnytt</a></li>
-                            <li> <a href="#" class="list-group-item">18.00 Rapport</a></li>
-                            <li> <a href="#" class="list-group-item">18.10 Lokala nyheter</a></li>
-                            <li> <a href="#" class="list-group-item">18.15 Landet runt</a></li>
-                            <li> <a href="#" class="list-group-item">19.00 Sportspegeln</a></li>
-                            <li> <a href="#" class="list-group-item">19.30 Rapport</a></li>
-                            <li> <a href="#" class="list-group-item">19.55 Lokala nyheter</a></li>
-                            <li> <a href="#" class="list-group-item">20.00 Allt för Sverige</a></li>
-                            <li> <a href="#" class="list-group-item">21.00 Springfloden</a></li>
-                            <li> <a href="#" class="list-group-item">21.45 Arbogafallet</a></li>
-                            <li> <a href="#" class="list-group-item">22.15 Salongen - tävlingsprogrammet</a></li>
-                            <li> <a href="#" class="list-group-item">23.00 Rapport</a></li>
-                            <li> <a href="#" class="list-group-item">23.05 Au pair i Kanada </a></li>
-                            <li> <a href="#" class="list-group-item">23.35 Robins</a></li>
+                            <li> <a href="#" class="list-group-item"> 06.45 Sverige!</a></li>
+                            <li> <a href="#" class="list-group-item"> 07.15 Timjan, tupp & tårta </a></li>
+                            <li> <a href="#" class="list-group-item"> 08.15 Docstop: Saara Aalto</a></li>
+                            <li> <a href="#" class="list-group-item"> 08.45 Idas skilda världar</a></li>
+                            <li> <a href="#" class="list-group-item"> 09.15 Landet runt</a></li>
+                            <li> <a href="#" class="list-group-item"> 10.00 Fråga Lund</a></li>
+                            <li> <a href="#" class="list-group-item"> 11.00 Vem vet mest?</a></li>
+                            <li> <a href="#" class="list-group-item"> 11.45 Duellen</a></li>
+                            <li> <a href="#" class="list-group-item"> 12.45 Sportstudion</a></li>
+                            <li> <a href="#" class="list-group-item"> 13.00 Ishockey: SDHL</a></li>
+                            <li> <a href="#" class="list-group-item"> 15.00 Sportstudion</a></li>
+                            <li> <a href="#" class="list-group-item"> 15.10 Ridsport: Världscupen hoppning</a></li>
+                            <li> <a href="#" class="list-group-item"> 17.00 Salongen - tävlingsprogrammet</a></li>
+                            <li> <a href="#" class="list-group-item"> 17.45 Svart kärlek HD Norskt program</a></li>
+                            <li> <a href="#" class="list-group-item"> 17.55 Sportnytt</a></li>
+                            <li> <a href="#" class="list-group-item"> 18.00 Rapport</a></li>
+                            <li> <a href="#" class="list-group-item"> 18.10 Lokala nyheter</a></li>
+                            <li> <a href="#" class="list-group-item"> 18.15 Landet runt</a></li>
+                            <li> <a href="#" class="list-group-item"> 19.00 Sportspegeln</a></li>
+                            <li> <a href="#" class="list-group-item"> 19.30 Rapport</a></li>
+                            <li> <a href="#" class="list-group-item"> 19.55 Lokala nyheter</a></li>
+                            <li> <a href="#" class="list-group-item"> 20.00 Allt för Sverige</a></li>
+                            <li> <a href="#" class="list-group-item"> 21.00 Springfloden</a></li>
+                            <li> <a href="#" class="list-group-item"> 21.45 Arbogafallet</a></li>
+                            <li> <a href="#" class="list-group-item"> 22.15 Salongen - tävlingsprogrammet</a></li>
+                            <li> <a href="#" class="list-group-item"> 23.00 Rapport</a></li>
+                            <li> <a href="#" class="list-group-item"> 23.05 Au pair i Kanada </a></li>
+                            <li> <a href="#" class="list-group-item"> 23.35 Robins</a></li>
                         </ul>
                     </div>
                 </div>
@@ -161,33 +157,33 @@
                     <img src="Images/svt2.png" class="img-responsive" alt="SVT2">
                     <div class="list-group">
                         <ul id="programlist">
-                            <li> <a href="#" class="list-group-item">08.10 Sverige idag på romani chib/arli</a></li>
-                            <li> <a href="#" class="list-group-item">08.20 Sverige idag på romani chib/lovari</a></li>
-                            <li> <a href="#" class="list-group-item">08.30 Judisk högtid: Sukkot</a></li>
-                            <li> <a href="#" class="list-group-item">09.00 Hundraårskåken</a></li>
-                            <li> <a href="#" class="list-group-item">09.30 Svenska dialektmysterier</a></li>
-                            <li> <a href="#" class="list-group-item">10.00 Gudstjänst</a></li>
-                            <li> <a href="#" class="list-group-item">10.45 Musikvideolegenden och 90-talet</a></li>
-                            <li> <a href="#" class="list-group-item">11.45 Bach på 90 minuter</a></li>
-                            <li> <a href="#" class="list-group-item">13.15 Glenn Gould spelar Bach</a></li>
-                            <li> <a href="#" class="list-group-item">14.10 Koranyi spelar Bach HD</a></li>
-                            <li> <a href="#" class="list-group-item">15.10 Jag ska hem till mamma</a></li>
-                            <li> <a href="#" class="list-group-item">15.25 Helt historiskt</a></li>
-                            <li> <a href="#" class="list-group-item">15.55 Sverige idag på romani chib/kalderash</a></li>
-                            <li> <a href="#" class="list-group-item">16.05 Rapport</a></li>
-                            <li> <a href="#" class="list-group-item">16.10 Sverige idag på meänkielu</a></li>
-                            <li> <a href="#" class="list-group-item">16.20 Kampen om kronan</a></li>
-                            <li> <a href="#" class="list-group-item">16.30 Hemma hos arkitekten</a></li>
-                            <li> <a href="#" class="list-group-item">17.00 Nathans judiska historia</a></li>
-                            <li> <a href="#" class="list-group-item">17.20 Kortfilmsklubben - spanska</a></li>
-                            <li> <a href="#" class="list-group-item">17.25 El internado UR</a></li>
-                            <li> <a href="#" class="list-group-item">18.00 Familjer med cancer</a></li>
-                            <li> <a href="#" class="list-group-item">19.00 Världens natur: Planet Earth 2</a></li>
-                            <li> <a href="#" class="list-group-item">20.00 Babel</a></li>
-                            <li> <a href="#" class="list-group-item">21.00 Aktuellt</a></li>
-                            <li> <a href="#" class="list-group-item">21.15 Agenda</a></li>
-                            <li> <a href="#" class="list-group-item">22.00 Dokument utifrån: Kraftmätningen</a></li>
-                            <li> <a href="#" class="list-group-item">23.50 Gudstjänst</a></li>
+                            <li> <a href="#" class="list-group-item"> 08.10 Sverige idag på romani chib/arli</a></li>
+                            <li> <a href="#" class="list-group-item"> 08.20 Sverige idag på romani chib/lovari</a></li>
+                            <li> <a href="#" class="list-group-item"> 08.30 Judisk högtid: Sukkot</a></li>
+                            <li> <a href="#" class="list-group-item"> 09.00 Hundraårskåken</a></li>
+                            <li> <a href="#" class="list-group-item"> 09.30 Svenska dialektmysterier</a></li>
+                            <li> <a href="#" class="list-group-item"> 10.00 Gudstjänst</a></li>
+                            <li> <a href="#" class="list-group-item"> 10.45 Musikvideolegenden och 90-talet</a></li>
+                            <li> <a href="#" class="list-group-item"> 11.45 Bach på 90 minuter</a></li>
+                            <li> <a href="#" class="list-group-item"> 13.15 Glenn Gould spelar Bach</a></li>
+                            <li> <a href="#" class="list-group-item"> 14.10 Koranyi spelar Bach HD</a></li>
+                            <li> <a href="#" class="list-group-item"> 15.10 Jag ska hem till mamma</a></li>
+                            <li> <a href="#" class="list-group-item"> 15.25 Helt historiskt</a></li>
+                            <li> <a href="#" class="list-group-item"> 15.55 Sverige idag på romani chib/kalderash</a></li>
+                            <li> <a href="#" class="list-group-item"> 16.05 Rapport</a></li>
+                            <li> <a href="#" class="list-group-item"> 16.10 Sverige idag på meänkielu</a></li>
+                            <li> <a href="#" class="list-group-item"> 16.20 Kampen om kronan</a></li>
+                            <li> <a href="#" class="list-group-item"> 16.30 Hemma hos arkitekten</a></li>
+                            <li> <a href="#" class="list-group-item"> 17.00 Nathans judiska historia</a></li>
+                            <li> <a href="#" class="list-group-item"> 17.20 Kortfilmsklubben - spanska</a></li>
+                            <li> <a href="#" class="list-group-item"> 17.25 El internado UR</a></li>
+                            <li> <a href="#" class="list-group-item"> 18.00 Familjer med cancer</a></li>
+                            <li> <a href="#" class="list-group-item"> 19.00 Världens natur: Planet Earth 2</a></li>
+                            <li> <a href="#" class="list-group-item"> 20.00 Babel</a></li>
+                            <li> <a href="#" class="list-group-item"> 21.00 Aktuellt</a></li>
+                            <li> <a href="#" class="list-group-item"> 21.15 Agenda</a></li>
+                            <li> <a href="#" class="list-group-item"> 22.00 Dokument utifrån: Kraftmätningen</a></li>
+                            <li> <a href="#" class="list-group-item"> 23.50 Gudstjänst</a></li>
                         </ul>
                     </div>
                 </div>
@@ -196,27 +192,27 @@
                     <img src="Images/tv3.jpg" class="img-responsive" alt="tv3">
                     <div class="list-group">
                         <ul id="programlist">
-                            <li> <a href="#" class="list-group-item">06.00 Pappaliv</a></li>
-                            <li> <a href="#" class="list-group-item">06.25 Pappaliv</a></li>
-                            <li> <a href="#" class="list-group-item">06.50 Kids do the craziest things</a></li>
-                            <li> <a href="#" class="list-group-item">07.15 Alla älskar Raymond</a></li>
-                            <li> <a href="#" class="list-group-item">07.35 Alla älskar Raymond</a></li>
-                            <li> <a href="#" class="list-group-item">08.00 Kevin can wait</a></li>
-                            <li> <a href="#" class="list-group-item">08.30 Kevin can wait</a></li>
-                            <li> <a href="#" class="list-group-item">09.00 Pretty little liars</a></li>
-                            <li> <a href="#" class="list-group-item">10.00 The real housewives of Sydney</a></li>
-                            <li> <a href="#" class="list-group-item">11.10 This is us</a></li>
-                            <li> <a href="#" class="list-group-item">12.10 How I met your mother</a></li>
-                            <li> <a href="#" class="list-group-item">12.45 En förtrollad romans</a></li>
-                            <li> <a href="#" class="list-group-item">15.00 Leva utan att dö - en serie om</a></li>
-                            <li> <a href="#" class="list-group-item">16.00 Gordon Ramsay's 24 hours to hell and back</a></li>
-                            <li> <a href="#" class="list-group-item">17.00 Unga mammor</a></li>
-                            <li> <a href="#" class="list-group-item">17.30 Unga mammor</a></li>
-                            <li> <a href="#" class="list-group-item">18.00 Lyxfällan</a></li>
-                            <li> <a href="#" class="list-group-item">19.00 Hemliga beundrare</a></li>
-                            <li> <a href="#" class="list-group-item">20.00 Frusna vägar</a></li>
-                            <li> <a href="#" class="list-group-item">21.00 Total recall</a></li>
-                            <li> <a href="#" class="list-group-item">23.25 TV3 Dokumentär: I huvudet på en mördare</a></li>
+                            <li> <a href="#" class="list-group-item"> 06.00 Pappaliv</a></li>
+                            <li> <a href="#" class="list-group-item"> 06.25 Pappaliv</a></li>
+                            <li> <a href="#" class="list-group-item"> 06.50 Kids do the craziest things</a></li>
+                            <li> <a href="#" class="list-group-item"> 07.15 Alla älskar Raymond</a></li>
+                            <li> <a href="#" class="list-group-item"> 07.35 Alla älskar Raymond</a></li>
+                            <li> <a href="#" class="list-group-item"> 08.00 Kevin can wait</a></li>
+                            <li> <a href="#" class="list-group-item"> 08.30 Kevin can wait</a></li>
+                            <li> <a href="#" class="list-group-item"> 09.00 Pretty little liars</a></li>
+                            <li> <a href="#" class="list-group-item"> 10.00 The real housewives of Sydney</a></li>
+                            <li> <a href="#" class="list-group-item"> 11.10 This is us</a></li>
+                            <li> <a href="#" class="list-group-item"> 12.10 How I met your mother</a></li>
+                            <li> <a href="#" class="list-group-item"> 12.45 En förtrollad romans</a></li>
+                            <li> <a href="#" class="list-group-item"> 15.00 Leva utan att dö - en serie om</a></li>
+                            <li> <a href="#" class="list-group-item"> 16.00 Gordon Ramsay's 24 hours to hell and back</a></li>
+                            <li> <a href="#" class="list-group-item"> 17.00 Unga mammor</a></li>
+                            <li> <a href="#" class="list-group-item"> 17.30 Unga mammor</a></li>
+                            <li> <a href="#" class="list-group-item"> 18.00 Lyxfällan</a></li>
+                            <li> <a href="#" class="list-group-item"> 19.00 Hemliga beundrare</a></li>
+                            <li> <a href="#" class="list-group-item"> 20.00 Frusna vägar</a></li>
+                            <li> <a href="#" class="list-group-item"> 21.00 Total recall</a></li>
+                            <li> <a href="#" class="list-group-item"> 23.25 TV3 Dokumentär: I huvudet på en mördare</a></li>
                         </ul>
                     </div>
                 </div>
@@ -225,26 +221,26 @@
                     <img src="Images/kanal4.png" class="img-responsive" alt="kanal4">
                     <div class="list-group">
                         <ul id="programlist">
-                            <li> <a href="#" class="list-group-item">06.00 Hela England bakar</a></li>
-                            <li> <a href="#" class="list-group-item">07.00 Bygglov</a></li>
-                            <li> <a href="#" class="list-group-item">07.55 Nyhetsmorgon</a></li>
+                            <li> <a href="#" class="list-group-item"> 06.00 Hela England bakar</a></li>
+                            <li> <a href="#" class="list-group-item"> 07.00 Bygglov</a></li>
+                            <li> <a href="#" class="list-group-item"> 07.55 Nyhetsmorgon</a></li>
                             <li> <a href="#" class="list-group-item">11.30 Så mycket bättre</a></li>
-                            <li> <a href="#" class="list-group-item">13.20 Bonde söker fru</a></li>
-                            <li> <a href="#" class="list-group-item">14.20 Bytt är bytt</a></li>
-                            <li> <a href="#" class="list-group-item">15.20 Kockarnas kamp</a></li>
-                            <li> <a href="#" class="list-group-item">16.20 Hela Sverige bakar</a></li>
-                            <li> <a href="#" class="list-group-item">17.25 Mumbo jumbo</a></li>
-                            <li> <a href="#" class="list-group-item">17.55 Keno</a></li>
-                            <li> <a href="#" class="list-group-item">18.00 Bingolotto</a></li>
-                            <li> <a href="#" class="list-group-item">19.00 Nyheterna</a></li>
-                            <li> <a href="#" class="list-group-item">19.10 Sporten</a></li>
-                            <li> <a href="#" class="list-group-item">19.25 Väder</a></li>
-                            <li> <a href="#" class="list-group-item">19.30 Bingolotto, forts</a></li>
-                            <li> <a href="#" class="list-group-item">20.00 Kockarnas kamp</a></li>
-                            <li> <a href="#" class="list-group-item">21.00 Hellenius hörna</a></li>
-                            <li> <a href="#" class="list-group-item">22.00 Nyheterna</a></li>
-                            <li> <a href="#" class="list-group-item">22.05 Väder</a></li>
-                            <li> <a href="#" class="list-group-item">22.10 Wallander: Prästen</a></li>
+                            <li> <a href="#" class="list-group-item"> 13.20 Bonde söker fru</a></li>
+                            <li> <a href="#" class="list-group-item"> 14.20 Bytt är bytt</a></li>
+                            <li> <a href="#" class="list-group-item"> 15.20 Kockarnas kamp</a></li>
+                            <li> <a href="#" class="list-group-item"> 16.20 Hela Sverige bakar</a></li>
+                            <li> <a href="#" class="list-group-item"> 17.25 Mumbo jumbo</a></li>
+                            <li> <a href="#" class="list-group-item"> 17.55 Keno</a></li>
+                            <li> <a href="#" class="list-group-item"> 18.00 Bingolotto</a></li>
+                            <li> <a href="#" class="list-group-item"> 19.00 Nyheterna</a></li>
+                            <li> <a href="#" class="list-group-item"> 19.10 Sporten</a></li>
+                            <li> <a href="#" class="list-group-item"> 19.25 Väder</a></li>
+                            <li> <a href="#" class="list-group-item"> 19.30 Bingolotto, forts</a></li>
+                            <li> <a href="#" class="list-group-item"> 20.00 Kockarnas kamp</a></li>
+                            <li> <a href="#" class="list-group-item"> 21.00 Hellenius hörna</a></li>
+                            <li> <a href="#" class="list-group-item"> 22.00 Nyheterna</a></li>
+                            <li> <a href="#" class="list-group-item"> 22.05 Väder</a></li>
+                            <li> <a href="#" class="list-group-item"> 22.10 Wallander: Prästen</a></li>
                         </ul>
                     </div>
                 </div>
@@ -276,6 +272,55 @@
         <a href="contact.html"> Kontakta oss </a> </footer>
 
     <script src="script.js"></script>
+    <script>
+
+        // $(function () {
+        // var availableTags = [
+        //     "ActionScript",
+        //     "AppleScript",
+        //     "Asp",
+        //     "BASIC",
+        //     "C",
+        //     "C++",
+        //     "Clojure",
+        //     "COBOL",
+        //     "ColdFusion",
+        //     "Erlang",
+        //     "Fortran",
+        //     "Groovy",
+        //     "Haskell",
+        //     "Java",
+        //     "JavaScript",
+        //     "Lisp",
+        //     "Perl",
+        //     "PHP",
+        //     "Python",
+        //     "Ruby",
+        //     "Scala",
+        //     "Scheme"
+        // ];
+        //     $("#inputautocomplete").autocomplete({
+        //         source: availableTags
+        //     });
+        // });
+
+        var test = document.forms["topnavsearch"]["search"].value;
+        var testLowCase = test.toLowerCase();
+
+        var list = document.getElementById("tvchannel");
+        // var items = list.getElementsByTagName("li"); 
+        // var availableTags = ["06.15 Under klubban",
+        //     "06.45 Sverige!",
+        //     "07.15 Timjan, tupp & tårta ",
+        //     " 08.15 Docstop: Saara Aalto"
+        // ];
+        // var availableTags = myFunction();
+   
+        $(function () {
+            $("#inputautocomplete").autocomplete({ source: items });
+        });
+
+    </script>
 
 </body>
 
