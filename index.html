@@ -58,7 +58,7 @@
                                          <input id="tags"> -->
                                 <form autocomplete="off" id="topnavsearch"><input id="inputautocomplete" type="text"
                                         name="search" placeholder="Sök...">
-                                    <button onclick="myFunction();" type="button">Sök</button>
+                                    <button onclick="getProgramInfo();" type="button">Sök</button>
                                 </form>
                             </div>
                         </li>
@@ -272,64 +272,6 @@
         <a href="contact.html"> Kontakta oss </a> </footer>
 
     <script src="script.js"></script>
-    <script>
-
-        // $(function () {
-        // var availableTags = [
-        //     "ActionScript",
-        //     "AppleScript",
-        //     "Asp",
-        //     "BASIC",
-        //     "C",
-        //     "C++",
-        //     "Clojure",
-        //     "COBOL",
-        //     "ColdFusion",
-        //     "Erlang",
-        //     "Fortran",
-        //     "Groovy",
-        //     "Haskell",
-        //     "Java",
-        //     "JavaScript",
-        //     "Lisp",
-        //     "Perl",
-        //     "PHP",
-        //     "Python",
-        //     "Ruby",
-        //     "Scala",
-        //     "Scheme"
-        // ];
-        //     $("#inputautocomplete").autocomplete({
-        //         source: availableTags
-        //     });
-        // });
-
-        var test = document.forms["topnavsearch"]["search"].value;
-        var testLowCase = test.toLowerCase();
-
-        var list = document.getElementById("tvchannel");
-        var items = list.getElementsByTagName("li");
-
-        var arr = new Array;
-
-        for (var i = 0; i < items.length; i++) {
-            var x = items[i].innerText;
-            arr.push(x);
-        }
-        // var availableTags = ["06.15 Under klubban",
-        //     "06.45 Sverige!",
-        //     "07.15 Timjan, tupp & tårta ",
-        //     " 08.15 Docstop: Saara Aalto"
-        // ];
-        // var availableTags = myFunction();
-
-
-        $(function () {
-            $("#inputautocomplete").autocomplete({ source: arr });
-        });
-
-    </script>
-
 </body>
 
 </html>

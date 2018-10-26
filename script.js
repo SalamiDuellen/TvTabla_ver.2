@@ -25,21 +25,20 @@ $(function () {
         }
     });
 });
-
-function myFunction() {
-
+// För sök med knapp
+function getProgramInfo() {
     var test = document.forms["topnavsearch"]["search"].value;
     var testLowCase = test.toLowerCase();
 
     var list = document.getElementById("tvchannel");
     var items = list.getElementsByTagName("li");
-
     var ulListAdd = document.getElementById("prog-info-ul");
 
     // //Printar alla li i en ul.
     for (var i = 0; i < items.length; i++) {
         var x = items[i].innerText;
         var xLowCAse = x.toLowerCase();
+
         if (xLowCAse.includes(testLowCase)) {
 
             // document.write(x);
@@ -49,6 +48,23 @@ function myFunction() {
         }
 
     };
+}
+// För autocomplete
+function createArray() {
+    var test = document.forms["topnavsearch"]["search"].value;
+    var testLowCase = test.toLowerCase();
+    var list = document.getElementById("tvchannel");
+    var items = list.getElementsByTagName("li");
+    var arr = new Array;
+
+    for (var i = 0; i < items.length; i++) {
+        var x = items[i].innerText;
+        arr.push(x);
+    }
     return arr;
 }
+$(function () {
+    var arr = createArray();
+    $("#inputautocomplete").autocomplete({ source: arr });
+});
 
