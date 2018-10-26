@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
         crossorigin="anonymous">
 
+    <!-- för autocompletefunktionen -->
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -19,6 +22,19 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
 
+
+
+
+    <script>
+            var test = document.forms["topnavsearch"]["search"].value;
+            var testLowCase = test.toLowerCase();
+            var list = document.getElementById("tvchannel");
+            var items = list.getElementsByTagName("li");
+
+            $(function () {
+                $("#inputautocomplete").autocomplete({ source: items });
+            });
+    </script>
 </head>
 
 <body>
@@ -41,9 +57,9 @@
                         <li><a href="aboutus.html">Om oss</a></li>
                         <li><a href="contact.html">Kontakta oss</a></li>
                         <li>
-                            <form id="topnavsearch"><input type="text" name="search" placeholder="Sök...">
-                                <!-- knappen funkar -->
-                                <button onclick="myFunction();" type="button">Sök</button>
+                            <form autocomplete="off" id="topnavsearch"><input id="inputautocomplete" type="text" name="search"
+                                    placeholder="Sök...">
+                                <button type="button">Sök</button>
                             </form>
                         </li>
                     </ul>
@@ -54,7 +70,9 @@
             </nav>
         </div>
         <div class="col-xs-12">
-        <p id="programinfo"><ul id="prog-info-ul"></ul></p>
+            <p id="programinfo">
+                <ul id="prog-info-ul"></ul>
+            </p>
         </div>
     </div>
 
@@ -203,26 +221,26 @@
                     <img src="Images/kanal4.png" class="img-responsive" alt="kanal4">
                     <div class="list-group">
                         <ul id="programlist">
-                                <li> <a href="#" class="list-group-item"> 06.00 Hela England bakar</a></li>
-                                <li> <a href="#" class="list-group-item"> 07.00 Bygglov</a></li>
-                                <li> <a href="#" class="list-group-item"> 07.55 Nyhetsmorgon</a></li>
-                                <li> <a href="#" class="list-group-item">11.30 Så mycket bättre</a></li>
-                                <li> <a href="#" class="list-group-item"> 13.20 Bonde söker fru</a></li>
-                                <li> <a href="#" class="list-group-item"> 14.20 Bytt är bytt</a></li>
-                                <li> <a href="#" class="list-group-item"> 15.20 Kockarnas kamp</a></li>
-                                <li> <a href="#" class="list-group-item"> 16.20 Hela Sverige bakar</a></li>
-                                <li> <a href="#" class="list-group-item"> 17.25 Mumbo jumbo</a></li>
-                                <li> <a href="#" class="list-group-item"> 17.55 Keno</a></li>
-                                <li> <a href="#" class="list-group-item"> 18.00 Bingolotto</a></li>
-                                <li> <a href="#" class="list-group-item"> 19.00 Nyheterna</a></li>
-                                <li> <a href="#" class="list-group-item"> 19.10 Sporten</a></li>
-                                <li> <a href="#" class="list-group-item"> 19.25 Väder</a></li>
-                                <li> <a href="#" class="list-group-item"> 19.30 Bingolotto, forts</a></li>
-                                <li> <a href="#" class="list-group-item"> 20.00 Kockarnas kamp</a></li>
-                                <li> <a href="#" class="list-group-item"> 21.00 Hellenius hörna</a></li>
-                                <li> <a href="#" class="list-group-item"> 22.00 Nyheterna</a></li>
-                                <li> <a href="#" class="list-group-item"> 22.05 Väder</a></li>
-                                <li> <a href="#" class="list-group-item"> 22.10 Wallander: Prästen</a></li>
+                            <li> <a href="#" class="list-group-item"> 06.00 Hela England bakar</a></li>
+                            <li> <a href="#" class="list-group-item"> 07.00 Bygglov</a></li>
+                            <li> <a href="#" class="list-group-item"> 07.55 Nyhetsmorgon</a></li>
+                            <li> <a href="#" class="list-group-item">11.30 Så mycket bättre</a></li>
+                            <li> <a href="#" class="list-group-item"> 13.20 Bonde söker fru</a></li>
+                            <li> <a href="#" class="list-group-item"> 14.20 Bytt är bytt</a></li>
+                            <li> <a href="#" class="list-group-item"> 15.20 Kockarnas kamp</a></li>
+                            <li> <a href="#" class="list-group-item"> 16.20 Hela Sverige bakar</a></li>
+                            <li> <a href="#" class="list-group-item"> 17.25 Mumbo jumbo</a></li>
+                            <li> <a href="#" class="list-group-item"> 17.55 Keno</a></li>
+                            <li> <a href="#" class="list-group-item"> 18.00 Bingolotto</a></li>
+                            <li> <a href="#" class="list-group-item"> 19.00 Nyheterna</a></li>
+                            <li> <a href="#" class="list-group-item"> 19.10 Sporten</a></li>
+                            <li> <a href="#" class="list-group-item"> 19.25 Väder</a></li>
+                            <li> <a href="#" class="list-group-item"> 19.30 Bingolotto, forts</a></li>
+                            <li> <a href="#" class="list-group-item"> 20.00 Kockarnas kamp</a></li>
+                            <li> <a href="#" class="list-group-item"> 21.00 Hellenius hörna</a></li>
+                            <li> <a href="#" class="list-group-item"> 22.00 Nyheterna</a></li>
+                            <li> <a href="#" class="list-group-item"> 22.05 Väder</a></li>
+                            <li> <a href="#" class="list-group-item"> 22.10 Wallander: Prästen</a></li>
                         </ul>
                     </div>
                 </div>

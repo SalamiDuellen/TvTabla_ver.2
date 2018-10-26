@@ -34,7 +34,7 @@ function myFunction() {
     var list = document.getElementById("tvchannel");
     var items = list.getElementsByTagName("li");
 
-    var ulListTest = document.getElementById("prog-info-ul");
+    var ulListAdd = document.getElementById("prog-info-ul");
 
 
     //Printar alla li i en ul.
@@ -47,10 +47,11 @@ function myFunction() {
 
             // document.write(x);
             var li = document.createElement('li');
-            ulListTest.appendChild(li);
+            ulListAdd.appendChild(li);
             li.innerHTML = li.innerHTML + x;
             // document.getElementById("programinfo").innerHTML = x;
         }
 
     };
 }
+
