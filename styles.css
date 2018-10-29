@@ -44,12 +44,9 @@ li form {
   background-color: #BDD4DE;
   float: right;
 }
-#headerprogramlogo {
-  text-align: center;
-}
-
-#headerprogramlogo img {
-  width: 15%;
+#imgDiv {
+  width: 100%;
+  max-width: 200px;
 }
 ul {
   list-style: none;

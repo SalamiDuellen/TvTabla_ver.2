@@ -59,7 +59,9 @@ function createArray() {
 
     for (var i = 0; i < items.length; i++) {
         var x = items[i].innerText;
-        arr.push(x);
+        if (x.substr(6, test.length).toUpperCase() == test.toUpperCase()) {
+            arr.push(x);
+        }
     }
     return arr;
 }
